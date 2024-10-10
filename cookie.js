@@ -8,7 +8,7 @@ cookieCount = Number(localStorage.getItem('cookies')) || 0
 const cookieMenu = document.createElement('details')
 
 cookieMenu.innerHTML = `
-  <summary id="cookieTitle">Cookies ${cookieCount}</summary>
+  <summary id="cookieTitle">Cookies: ${cookieCount}</summary>
   <img id="cookie" src="users/mods/cookie.webp" onclick="cookieFunction()"></img>
 
    <style nodraw>
