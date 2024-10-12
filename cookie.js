@@ -9,7 +9,7 @@ const cookieMenu = document.createElement('details')
 
 cookieMenu.innerHTML = `
   <summary id="cookieTitle">Cookies: ${cookieCount}</summary>
-  <img id="cookie" src="users/mods/cookie.webp" onclick="cookieFunction()"></img>
+  <img id="cookie" src="https://raw.githubusercontent.com/BoxelLogica/Sunkist-Mods/refs/heads/main/cookie.webp" onclick="cookieFunction()"></img>
 
    <style nodraw>
       #cookie {transition: all 0.1s cubic-bezier(.17,1.02,.61,1.31);filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.75));}
