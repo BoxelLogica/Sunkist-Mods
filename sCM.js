@@ -1,7 +1,9 @@
 /* START Sunkist Context Menu */
 // DEFINE CLIENT WIDTH + HEIGHT
 var cWidth = window.innerWidth;
-var cHeight = window.innerHeight
+var cHeight = window.innerHeight;
+var sCMdebug = false;
+
 
 $(window).on('resize', function(){
   cWidth = window.innerWidth;
@@ -13,6 +15,7 @@ $(window).on('resize', function(){
 // CREATE SUNKIST CONTEXT MENU + HIDE IT
 const sCM = document.createElement('div');
 sCM.id = 'sCM';
+
 document.body.appendChild(sCM);
 $('#sCM').hide();
 
@@ -74,7 +77,14 @@ $('*').on('contextmenu', function(e) {
     $('#sCM').html(`
       <div onclick='$("#soapMode").val("<pre><code>${e.target.value}</code></pre>")'>Code Format</div>
       <div onclick='navigator.clipboard.writeText("${window.getSelection()}")'>Copy Selected</div>
+      <hr>
     `);
+    if (sCMdebug == false) {
+      $('#sCM').append(`<div onclick='sCMdebug = true'>Debug Options <span style='color:red;text-shadow: 0 0 5px red'>[OFF]</span></div>`)
+    }
+    else {
+      $('#sCM').append(`<div onclick='sCMdebug = false'>Debug Options <span style='color:lime;text-shadow: 0 0 5px lime'>[ON]</span></div>`)
+    }
   }
 
 
@@ -84,6 +94,18 @@ $('*').on('contextmenu', function(e) {
       <div>No key element selected.</div>
     `);
   }
+
+
+
+
+  if (sCMdebug == true) {
+    var objId = $(e.target).attr('id');
+    var objClass = $(e.target).attr('class');
+    $('#sCM').append(`<hr><div onclick="alert('ID: ${objId}   |   Class: ${objClass}');">Get ID / Class</div>`)
+  }
+
+
+
 });
 
 const sCMStyle = document.createElement('style')
@@ -135,4 +157,7 @@ sCMStyle.innerHTML = `
 }
 `
 body.appendChild(sCMStyle)
+
+
+
 /* END Sunkist Context Menu */
