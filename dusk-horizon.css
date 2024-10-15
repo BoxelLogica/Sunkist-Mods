@@ -11,7 +11,7 @@ textarea {outline: none!important;}
  box-shadow: 0 0 30px 15px rgba(0,0,0,0.7), 0 0 10px 7px rgba(0,0,0,0.3);
  padding: 10px;
  border: solid 1px rgba(0,0,0,0.1);
- width: 98%!important;
+ width: 98%;
 }
 
 a {
