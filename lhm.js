@@ -81,6 +81,7 @@ traditionalStyle.innerHTML = `
 		right: 0!important;
 		left: unset!important;
 		padding: 5px!important;
+                margin: 0!important;
 		width: 80%!important;
 		height:10vh!important;
 		margin-top:0!important;
