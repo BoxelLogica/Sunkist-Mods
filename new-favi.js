@@ -16,6 +16,6 @@ function markAsRead(){
   document.getElementById("menuTitle").style.color = "yellow";
   document.getElementById("menuTitle").style.textShadow = "0px 0px 10px yellow";
   document.getElementById("menuTitle").innerText = sunkistsPalace;
-  document.getElementById("icon").href = "https://raw.githubusercontent.com/BoxelLogica/Sunkist-Mods/refs/heads/main/assets/split.png";
+  document.getElementById("icon").href = "https://raw.githubusercontent.com/BoxelLogica/Sunkist-Mods/refs/heads/main/assets/sp.png";
 }
 /* END New Favi */
