@@ -50,7 +50,8 @@ traditionalStyle.innerHTML = `
 		height:100%;
 		position: fixed;
 		overflow-y:scroll;
-		overflow-x:hidden
+		overflow-x:hidden;
+                border-radius: 0px;
 	}
 
 	#menu::before {
