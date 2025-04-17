@@ -51,7 +51,13 @@ traditionalStyle.innerHTML = `
 		position: fixed;
 		overflow-y:scroll;
 		overflow-x:hidden;
-                border-radius: 0px;
+                border-radius: 0px;	
+    		-ms-overflow-style: none;  /* Internet Explorer 10+ */
+    		scrollbar-width: none;  /* Firefox */
+	}
+ 
+	.menu::-webkit-scrollbar { 
+    		display: none;  /* Safari and Chrome */
 	}
 
 	body::before {
